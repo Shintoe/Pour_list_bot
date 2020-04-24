@@ -1,7 +1,5 @@
 import discord 
-from discord.ext import commands
 import pandas as pd
-# scrape = data 
 
 def embed_csv_file():
     df = pd.DataFrame(pd.read_csv('candles.csv'))
