@@ -48,6 +48,7 @@ async def on_message(message):
             title='Commands Help'
         )
         embed.add_field(name="!pourlist", value='This command shows the current pourlist', inline=True)
+        embed.add_field(name="!remove #", value="This command will remove a list item EX: !remove 2... this will remove item 2 on the list")
         await message.channel.send(embed=embed)
     if message.content.startswith('!remove'):
         df = pd.DataFrame(pd.read_csv('candles.csv'))
